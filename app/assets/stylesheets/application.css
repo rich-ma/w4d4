@@ -13,3 +13,50 @@
  *= require_tree .
  *= require_self
  */
+.main-header {
+  background-image: url("https://thumbs.dreamstime.com/t/music-header-colorful-tracks-wave-website-blog-34818868.jpg");
+  width: inherit;
+}
+
+.main-title {
+  font-style: italic;
+  color: yellow;
+  font-family: "Comic Sans MS";
+  display: inline-block;
+  font-size: 50;
+}
+
+.login {
+  display: flex;
+  float: right;
+}
+
+ul {
+  list-style-type: none;
+  font-family: monospace;
+}
+
+a {
+color: white;
+background-color: black;
+border-radius: 50px;
+}
+
+body {
+  background-color: black;
+}
+
+.session-form {
+  font-family: fantasy;
+  color: white;
+  padding: 20px;
+  background-color: gray;
+  width: 300px;
+  display: flex;
+
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
