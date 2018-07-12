@@ -1,22 +1,24 @@
-<% action_url = user.persisted? ? new_session_url : users_url %>
-<% text = user.persisted? ? 'Log-In' : 'Sign-Up' %>
-
-
+<% if action == :login
+    action_url = session_url
+    text = 'Log-In'
+  else
+    action_url = users_url
+    text = 'Sign-Up'
+  end %>
 
 <form action="<%= action_url %>" method="post">
-
+  <%= auth_token %>
   <label for="email">E-mail: </label>
   <input id="email"
   type="text"
   name="user[email]"
-  value="<%= @user.email %>"><br>
+  value=""><br>
 
   <label for="password">Password: </label>
   <input id="password"
   type="password"
   name="user[password]"
-  value="<%= @user.password %>"><br>
+  value=""><br>
 
   <input type="submit" value= "<%= text %>">
-
 </form>

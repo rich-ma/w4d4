@@ -1,15 +1,28 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>MusicApp</title>
+    <title>Music App</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
- 
+
+  <h1 class='main-title'>Music App</h1>
+
   <body>
     <%= yield %>
   </body>
+
+
+  <% unless logged_in? %>
+    <%= link_to "Sign Up", new_user_url %><br>
+    <%= link_to "Sign In", new_session_url %>
+  <% else %>
+  <%= button_to "Logout", session_url, method: :delete %>
+
+
+  <% end %>
+
 </html>
