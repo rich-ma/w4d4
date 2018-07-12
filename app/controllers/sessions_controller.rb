@@ -9,11 +9,10 @@ class SessionsController < ApplicationController
     @user = User.find_by_credentials(params[:user][:email], params[:user][:password])
     if @user
       login!(@user)
-      redirect_to user_url
+      redirect_to user_url(@user)
     else
-
-
-
+      flash[:error] = ["Invalid email/password combo"]
+    end
   end
 
   def destroy
@@ -21,11 +20,9 @@ class SessionsController < ApplicationController
     redirct_to new_session_url
   end
 
-
   private
 
   def session_params
     params.require(:session)
   end
-
 end
