@@ -14,16 +14,16 @@
  *= require_self
  */
 .main-header {
-  background-image: url("https://thumbs.dreamstime.com/t/music-header-colorful-tracks-wave-website-blog-34818868.jpg");
+
   width: inherit;
 }
 
 .main-title {
-  font-style: italic;
-  color: yellow;
-  font-family: "Comic Sans MS";
+  font-style: bold;
+  color: White;
+  font-family: "Garamond";
   display: inline-block;
-  font-size: 50;
+  font-size: 100;
 }
 
 .login {
@@ -43,7 +43,8 @@ border-radius: 50px;
 }
 
 body {
-  background-color: black;
+  background-image: url("https://i.pinimg.com/originals/23/2e/fa/232efa9d5655059ad8f244c3241a6026.jpg");
+  background-size: cover;
 }
 
 .session-form {
